@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hello, Flask is running!"
+    return "backend is running!"
 
 @app.route('/health')
 def health():
