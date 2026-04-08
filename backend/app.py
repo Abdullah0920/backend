@@ -27,7 +27,7 @@ def submit():
         name = request.form.get('name')
         email = request.form.get('email')
         if not name or not email:
-            raise ValueError("All fields required")
+            raise ValueError("All fields are required")
         collection.insert_one({"name": name, "email": email})
         return redirect(url_for('success'))
     except Exception as e:
